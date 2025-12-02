@@ -9,7 +9,7 @@ body {
   margin: 0;
   font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
-  color: #4e4b34; /* texto principal */
+  color: #4e4b34; 
   background-color: #f7f7f7;
 }
 
@@ -21,27 +21,24 @@ body {
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: #3d6944; /* verde principal */
+  background-color: #3d6944;
   color: #ffffff;
 }
 
-/* Barra superior (desktop + mobile) */
 .nav-bar {
-  height: 75px;            /* mobile/nav base */
+  height: 75px;
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Logo */
 .nav-logo img {
-  height: 55px; /* mobile size */
+  height: 55px;
 }
 
-/* Links desktop */
 .nav-desktop {
-  display: none; /* oculto en mobile */
+  display: none;
   align-items: center;
   gap: 24px;
 }
@@ -65,7 +62,6 @@ body {
   text-decoration: underline;
 }
 
-/* Botones generales */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -84,7 +80,7 @@ body {
   padding: 10px 24px;
 }
 
-/* Botón hamburguesa (mobile) */
+/* Botón hamburguesa */
 .nav-toggle {
   background: none;
   border: none;
@@ -103,7 +99,6 @@ body {
   border-radius: 999px;
 }
 
-/* Estado X (cuando el menú está abierto) */
 .nav-toggle.is-open .nav-toggle-line:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
@@ -118,15 +113,13 @@ body {
 
 /* ===== Menú móvil ===== */
 
-/* 🔴 IMPORTANTE: cerrado por defecto */
 .nav-mobile {
   display: none;
-  background-color: #2b4731; /* verde más oscuro */
+  background-color: #2b4731;
   color: #ffffff;
   padding: 24px 20px 32px;
 }
 
-/* Se abre sólo cuando JS agrega esta clase */
 .nav-mobile.is-open {
   display: block;
 }
@@ -151,13 +144,11 @@ body {
   font-size: 16px;
 }
 
-/* Botón full-width en mobile */
 .btn-full {
   width: 100%;
   margin-bottom: 24px;
 }
 
-/* Redes sociales (mobile) */
 .nav-social {
   display: flex;
   gap: 16px;
@@ -169,7 +160,7 @@ body {
   border-radius: 999px;
   background-color: #ffffff;
   display: flex;
-  align-items: center;
+ 	align-items: center;
   justify-content: center;
 }
 
@@ -178,10 +169,9 @@ body {
   height: 28px;
 }
 
-/* ===== Iconos sociales desktop ===== */
-
+/* Iconos sociales desktop */
 .nav-social-desktop {
-  display: none;           /* ocultos en mobile */
+  display: none;
   align-items: center;
   gap: 12px;
 }
@@ -198,20 +188,18 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #ffffff; /* mismo look que mobile */
+  background-color: #ffffff;
 }
 
-/* ===== Global mobile padding para el contenido ===== */
-
+/* Global mobile padding */
 @media (max-width: 767px) {
   .page-content {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
-/* ===== Desktop (>= 768px) ===== */
-
+/* Desktop header adjustments */
 @media (min-width: 768px) {
   .nav-bar {
     height: 76px;
@@ -219,7 +207,7 @@ body {
   }
 
   .nav-logo img {
-    height: 60px; /* desktop size */
+    height: 60px;
   }
 
   .nav-desktop {
@@ -235,43 +223,47 @@ body {
   }
 
   .btn-primary {
-    font-size: 16px; /* más pequeño en desktop */
-    padding: 10px 20px; /* más estrecho */
+    font-size: 16px;
+    padding: 10px 20px;
   }
 
   .nav-social-desktop {
-    display: flex; /* se muestran sólo en desktop */
+    display: flex;
   }
 }
-/* ===== HERO SECTION ===== */
 
+/* ========================================================= */
+/* ====================== HERO SECTION ====================== */
+/* ========================================================= */
+
+/* ===== MOBILE ===== */
 .hero {
   position: relative;
   color: #ffffff;
-  /* mobile background image */
-  background-image: url("../img/hero-mobile.img");
+  
+  background-image: url("../img/hero-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  /* make room under fixed header */
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 75px); /* full screen minus header */
 
   display: flex;
-  align-items: center;
-  padding: 80px 20px 80px;
+  align-items: center; 
+  justify-content: center; /* centered on mobile */
+
+  padding: 0 20px;
 }
 
-/* dark / green overlay on top of the image */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(61, 105, 68, 0.1); /* verde oscuro con transparencia */
+  background: rgba(61, 105, 68, 0.9);
 }
 
 .hero-inner {
-  position: relative; /* so it sits above the overlay */
+  position: relative;
   max-width: 480px;
 }
 
@@ -288,21 +280,34 @@ body {
   line-height: 1.5;
 }
 
-/* botón en el hero */
 .hero-cta {
   margin-top: 8px;
   padding-inline: 28px;
 }
 
-/* ===== HERO DESKTOP ===== */
+/* ===== DESKTOP ===== */
 @media (min-width: 768px) {
   .hero {
-    /* desktop background image */
     background-image: url("../img/hero-desktop.webp");
     background-position: center right;
-    min-height: 720px;
-    padding: 120px 80px;
-    justify-content: center;
+
+    min-height: 640px; /* adjust height here */
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* left-aligned text */
+
+    padding: 0 80px;
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      to right,
+      rgba(61, 105, 68, 0.95) 0%,
+      rgba(61, 105, 68, 0.7) 40%,
+      rgba(61, 105, 68, 0.1) 70%,
+      rgba(61, 105, 68, 0) 100%
+    );
   }
 
   .hero-title {
@@ -313,4 +318,3 @@ body {
     font-size: 18px;
   }
 }
-
