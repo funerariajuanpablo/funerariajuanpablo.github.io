@@ -13,9 +13,11 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+
   <!-- HEADER / NAV -->
   <header class="site-header">
     <div class="nav-bar">
+      
       <!-- Logo -->
       <a href="#inicio" class="nav-logo">
         <img src="img/logo-funeraria-juan-pablo.svg" alt="Funeraria Juan Pablo" />
@@ -23,26 +25,29 @@
 
       <!-- Navegación desktop -->
       <nav class="nav-desktop" aria-label="Navegación principal">
+
         <ul class="nav-links">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#planes">Planes</a></li>
           <li><a href="#beneficios">Beneficios</a></li>
         </ul>
-        
+
+        <!-- Social media inside the desktop nav -->
+        <div class="nav-social-desktop">
+          <a href="https://www.facebook.com/p/Funeraria-Juan-Pablo-100064032100883/" target="_blank" aria-label="Facebook">
+            <img src="img/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://wa.me/573102051660" target="_blank" aria-label="WhatsApp">
+            <img src="img/whatsapp.svg" alt="WhatsApp" />
+          </a>
+        </div>
+
+        <!-- CTA desktop -->
         <a href="#planes" class="btn btn-primary">
           Quiero afiliarme
         </a>
-        
-          <div class="nav-social-desktop">
-          <a href="https://www.facebook.com/p/Funeraria-Juan-Pablo-100064032100883/" target="_blank" aria-label="Facebook">
-          <img src="img/facebook.svg" alt="Facebook" />
-          </a>
-          <a href="https://wa.me/573102051660" target="_blank" aria-label="WhatsApp">
-         <img src="img/whatsapp.svg" alt="WhatsApp" />
-          </a>
-         </div>
-    
+
       </nav>
 
       <!-- Botón hamburguesa (mobile) -->
@@ -57,11 +62,13 @@
         <span class="nav-toggle-line"></span>
         <span class="nav-toggle-line"></span>
       </button>
+
     </div>
 
     <!-- Menú móvil desplegable -->
-    <div class="nav-mobile" id="mobile-menu" hidden>
+    <div class="nav-mobile" id="mobile-menu">
       <nav aria-label="Navegación móvil">
+
         <ul class="nav-mobile-links">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
@@ -81,12 +88,14 @@
             <img src="img/whatsapp.svg" alt="WhatsApp" />
           </a>
         </div>
+
       </nav>
     </div>
+
   </header>
 
-  <!-- CONTENIDO DE PRUEBA (puedes borrarlo luego) -->
-  <main style="padding-top: 90px;">
+  <!-- CONTENIDO -->
+  <main class="page-content">
     <section id="inicio">
       <h1>Inicio</h1>
       <p>Contenido de ejemplo. Aquí irá tu hero y el resto del sitio.</p>
