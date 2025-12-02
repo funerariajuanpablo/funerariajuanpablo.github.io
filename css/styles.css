@@ -38,8 +38,13 @@ body {
 
 /* Logo */
 .nav-logo img {
-  display: block;
-  height: 32px; /* mobile */
+  height: 40px; /* mobile size */
+}
+
+@media (min-width: 768px) {
+  .nav-logo img {
+    height: 60px; /* desktop size */
+  }
 }
 
 /* Links desktop */
