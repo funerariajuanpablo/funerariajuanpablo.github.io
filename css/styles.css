@@ -27,7 +27,7 @@ body {
 
 /* Barra superior (desktop + mobile) */
 .nav-bar {
-  height: 75px;            /* increased for logo */
+  height: 75px;            /* mobile/nav base */
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -37,12 +37,6 @@ body {
 /* Logo */
 .nav-logo img {
   height: 55px; /* mobile size */
-}
-
-@media (min-width: 768px) {
-  .nav-logo img {
-    height: 60px; /* desktop size */
-  }
 }
 
 /* Links desktop */
@@ -71,7 +65,7 @@ body {
   text-decoration: underline;
 }
 
-/* Botón CTA */
+/* Botones generales */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -122,11 +116,19 @@ body {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* Menú móvil */
+/* ===== Menú móvil ===== */
+
+/* 🔴 IMPORTANTE: cerrado por defecto */
 .nav-mobile {
+  display: none;
   background-color: #2b4731; /* verde más oscuro */
   color: #ffffff;
   padding: 24px 20px 32px;
+}
+
+/* Se abre sólo cuando JS agrega esta clase */
+.nav-mobile.is-open {
+  display: block;
 }
 
 .nav-mobile nav {
@@ -155,7 +157,7 @@ body {
   margin-bottom: 24px;
 }
 
-/* Redes sociales */
+/* Redes sociales (mobile) */
 .nav-social {
   display: flex;
   gap: 16px;
@@ -175,48 +177,11 @@ body {
   width: 28px;
   height: 28px;
 }
-/* GLOBAL MOBILE PADDING */
-@media (max-width: 767px) {
-  .page-content {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
 
-/* ===== Desktop (>= 768px) ===== */
-@media (min-width: 768px) {
-  .nav-bar {
-    height: 76px;
-    padding: 0 40px;
-  }
+/* ===== Iconos sociales desktop ===== */
 
-  .nav-logo img {
-    height: 48px;
-  }
-
-  .nav-desktop {
-    display: flex;
-  }
-
-  .nav-toggle {
-    display: none;
-  }
-
-  .nav-mobile {
-    display: none !important;
-  }
-
-@media (min-width: 768px) {
-  .btn-primary {
-    font-size: 16px; /* smaller */
-    padding: 10px 20px; /* narrower */
-  }
-}
-}
-
-/* Desktop social icons */
 .nav-social-desktop {
-  display: flex;
+  display: none;           /* ocultos en mobile */
   align-items: center;
   gap: 12px;
 }
@@ -233,11 +198,48 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #ffffff; /* same look as mobile */
+  background-color: #ffffff; /* mismo look que mobile */
 }
 
+/* ===== Global mobile padding para el contenido ===== */
+
+@media (max-width: 767px) {
+  .page-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* ===== Desktop (>= 768px) ===== */
+
 @media (min-width: 768px) {
-  .nav-social-desktop {
+  .nav-bar {
+    height: 76px;
+    padding: 0 40px;
+  }
+
+  .nav-logo img {
+    height: 60px; /* desktop size */
+  }
+
+  .nav-desktop {
     display: flex;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: none !important;
+  }
+
+  .btn-primary {
+    font-size: 16px; /* más pequeño en desktop */
+    padding: 10px 20px; /* más estrecho */
+  }
+
+  .nav-social-desktop {
+    display: flex; /* se muestran sólo en desktop */
   }
 }
