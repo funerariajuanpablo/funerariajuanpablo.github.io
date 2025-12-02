@@ -27,10 +27,8 @@ body {
 
 /* Barra superior (desktop + mobile) */
 .nav-bar {
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 70px; /* mobile base, se ajusta en desktop con media query */
-  padding: 10 20px;
+  height: 75px;            /* increased for logo */
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -177,6 +175,13 @@ body {
   width: 28px;
   height: 28px;
 }
+/* GLOBAL MOBILE PADDING */
+@media (max-width: 767px) {
+  .page-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
 /* ===== Desktop (>= 768px) ===== */
 @media (min-width: 768px) {
@@ -211,9 +216,9 @@ body {
 
 /* Desktop social icons */
 .nav-social-desktop {
-  display: none;
+  display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .nav-social-desktop img {
