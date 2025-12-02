@@ -160,7 +160,7 @@ body {
   border-radius: 999px;
   background-color: #ffffff;
   display: flex;
- 	align-items: center;
+  align-items: center;
   justify-content: center;
 }
 
@@ -240,25 +240,26 @@ body {
 .hero {
   position: relative;
   color: #ffffff;
-  
+
   background-image: url("../img/hero-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  min-height: calc(100vh - 75px); /* full screen minus header */
+  min-height: calc(100vh - 75px);
 
   display: flex;
-  align-items: center; 
-  justify-content: center; /* centered on mobile */
-
+  align-items: center;
+  justify-content: center;
   padding: 0 20px;
 }
 
+/* MOBILE OVERLAY (KEEP THIS FOR MOBILE ONLY) */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
+  background: rgba(61, 105, 68, 0.9); 
 }
 
 .hero-inner {
@@ -290,13 +291,17 @@ body {
     background-image: url("../img/hero-desktop.webp");
     background-position: center right;
 
-    min-height: 640px; /* adjust height here */
+    min-height: 640px;
 
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* left-aligned text */
-
+    justify-content: flex-start;
     padding: 0 80px;
+  }
+
+  /* REMOVE OVERLAY ON DESKTOP */
+  .hero::before {
+    background: none !important;
   }
 
   .hero-title {
