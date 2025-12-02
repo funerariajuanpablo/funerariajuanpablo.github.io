@@ -38,7 +38,7 @@ body {
 
 /* Logo */
 .nav-logo img {
-  height: 40px; /* mobile size */
+  height: 55px; /* mobile size */
 }
 
 @media (min-width: 768px) {
