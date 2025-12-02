@@ -249,7 +249,7 @@ body {
   position: relative;
   color: #ffffff;
   /* mobile background image */
-  background-image: url("../img/hero-mobile.webp");
+  background-image: url("../img/hero-mobile.img");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
