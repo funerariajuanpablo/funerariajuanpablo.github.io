@@ -243,3 +243,85 @@ body {
     display: flex; /* se muestran sólo en desktop */
   }
 }
+/* ===== HERO SECTION ===== */
+
+.hero {
+  position: relative;
+  color: #ffffff;
+  /* mobile background image */
+  background-image: url("../img/hero-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* make room under fixed header */
+  min-height: calc(100vh - 75px);
+
+  display: flex;
+  align-items: center;
+  padding: 80px 20px 80px;
+}
+
+/* dark / green overlay on top of the image */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(61, 105, 68, 0.9); /* verde oscuro con transparencia */
+}
+
+.hero-inner {
+  position: relative; /* so it sits above the overlay */
+  max-width: 480px;
+}
+
+.hero-title {
+  margin: 0 0 24px;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero-text {
+  margin: 0 0 24px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* botón en el hero */
+.hero-cta {
+  margin-top: 8px;
+  padding-inline: 28px;
+}
+
+/* ===== HERO DESKTOP ===== */
+@media (min-width: 768px) {
+  .hero {
+    /* desktop background image */
+    background-image: url("../img/hero-desktop.jpg");
+    background-position: center right;
+    min-height: 560px;
+    padding: 120px 80px;
+    justify-content: flex-start;
+  }
+
+  .hero::before {
+    /* degradado que se desvanece hacia la derecha */
+    background: linear-gradient(
+      to right,
+      rgba(61, 105, 68, 0.95) 0%,
+      rgba(61, 105, 68, 0.7) 40%,
+      rgba(61, 105, 68, 0.1) 70%,
+      rgba(61, 105, 68, 0) 100%
+    );
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+  }
+}
+
