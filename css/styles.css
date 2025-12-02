@@ -300,7 +300,7 @@ body {
     /* desktop background image */
     background-image: url("../img/hero-desktop.webp");
     background-position: center right;
-    min-height: 720px;
+    min-height: 800px;
     padding: 120px 80px;
     justify-content: flex-start;
   }
