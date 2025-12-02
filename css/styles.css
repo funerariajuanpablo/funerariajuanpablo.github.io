@@ -249,7 +249,7 @@ body {
   position: relative;
   color: #ffffff;
   /* mobile background image */
-  background-image: url("../img/hero-mobile.jpg");
+  background-image: url("../img/hero-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -298,7 +298,7 @@ body {
 @media (min-width: 768px) {
   .hero {
     /* desktop background image */
-    background-image: url("../img/hero-desktop.jpg");
+    background-image: url("../img/hero-desktop.webp");
     background-position: center right;
     min-height: 560px;
     padding: 120px 80px;
