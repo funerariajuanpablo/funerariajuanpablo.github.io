@@ -29,8 +29,8 @@ body {
 .nav-bar {
   max-width: 1200px;
   margin: 0 auto;
-  height: 60px; /* mobile base, se ajusta en desktop con media query */
-  padding: 0 20px;
+  height: 70px; /* mobile base, se ajusta en desktop con media query */
+  padding: 10 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
