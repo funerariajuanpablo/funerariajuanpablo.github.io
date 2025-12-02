@@ -161,6 +161,11 @@ body {
   justify-content: center;
 }
 
+.nav-social img {
+  width: 28px;
+  height: 28px;
+}
+
 .nav-social-desktop {
   display: none;
   gap: 12px;
@@ -176,11 +181,22 @@ body {
   justify-content: center;
 }
 
-/* ===== Global mobile padding ===== */
+/* ===== Global mobile padding / mobile tweaks ===== */
 @media (max-width: 767px) {
-  /* REMOVE page padding so hero extends to edges */
+  /* Remove global padding so hero can go edge-to-edge */
   .page-content {
     padding: 0;
+  }
+
+  /* Smaller social icons on mobile */
+  .nav-social a {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-social img {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -240,13 +256,6 @@ body {
   padding: 0 20px;
 }
 
-/* MOBILE OVERLAY (keep) */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-}
-
 .hero-inner {
   position: relative;
   max-width: 480px;
@@ -285,12 +294,7 @@ body {
     padding: 0 80px;
   }
 
-  /* REMOVE OVERLAY ON DESKTOP */
-  .hero::before {
-    background: none !important;
-  }
-
-  /* Text shadows for clarity */
+  /* Text shadows for clarity over the photo */
   .hero-title,
   .hero-text {
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.65);
