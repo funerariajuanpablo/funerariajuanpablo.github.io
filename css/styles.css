@@ -208,3 +208,21 @@ body {
   }
 }
 }
+
+/* Desktop social icons */
+.nav-social-desktop {
+  display: none;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-social-desktop img {
+  width: 28px;
+  height: 28px;
+}
+
+@media (min-width: 768px) {
+  .nav-social-desktop {
+    display: flex;
+  }
+}
