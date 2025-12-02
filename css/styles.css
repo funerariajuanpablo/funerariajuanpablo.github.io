@@ -221,6 +221,16 @@ body {
   height: 28px;
 }
 
+.nav-social-desktop a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff; /* same look as mobile */
+}
+
 @media (min-width: 768px) {
   .nav-social-desktop {
     display: flex;
