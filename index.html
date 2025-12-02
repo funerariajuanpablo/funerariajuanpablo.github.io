@@ -1,12 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Funeraria Juan Pablo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fuente Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <h1>Funeraria Juan Pablo</h1>
-  <p>Sitio web en construcción. Muy pronto estaremos en línea.</p>
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="nav-bar">
+      <!-- Logo -->
+      <a href="#inicio" class="nav-logo">
+        <img src="img/logo-funeraria-juan-pablo.svg" alt="Funeraria Juan Pablo" />
+      </a>
+
+      <!-- Navegación desktop -->
+      <nav class="nav-desktop" aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+        </ul>
+
+        <a href="#planes" class="btn btn-primary">
+          Quiero afiliarme
+        </a>
+      </nav>
+
+      <!-- Botón hamburguesa (mobile) -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </div>
+
+    <!-- Menú móvil desplegable -->
+    <div class="nav-mobile" id="mobile-menu" hidden>
+      <nav aria-label="Navegación móvil">
+        <ul class="nav-mobile-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+        </ul>
+
+        <a href="#planes" class="btn btn-primary btn-full">
+          Quiero afiliarme
+        </a>
+
+        <div class="nav-social">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <img src="img/icon-facebook.svg" alt="Facebook" />
+          </a>
+          <a href="https://wa.me/573000000000" target="_blank" aria-label="WhatsApp">
+            <img src="img/icon-whatsapp.svg" alt="WhatsApp" />
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO DE PRUEBA (puedes borrarlo luego) -->
+  <main style="padding-top: 90px;">
+    <section id="inicio">
+      <h1>Inicio</h1>
+      <p>Contenido de ejemplo. Aquí irá tu hero y el resto del sitio.</p>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
