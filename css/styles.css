@@ -305,17 +305,6 @@ body {
     justify-content: flex-start;
   }
 
-  .hero::before {
-    /* degradado que se desvanece hacia la derecha */
-    background: linear-gradient(
-      to right,
-      rgba(61, 105, 68, 0.95) 0%,
-      rgba(61, 105, 68, 0.7) 40%,
-      rgba(61, 105, 68, 0.1) 70%,
-      rgba(61, 105, 68, 0) 100%
-    );
-  }
-
   .hero-title {
     font-size: 40px;
   }
