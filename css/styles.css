@@ -121,14 +121,9 @@ body {
 
 /* Menú móvil */
 .nav-mobile {
-  display: none;              /* oculto por defecto */
-  background-color: #2b4731;  /* verde más oscuro */
+  background-color: #2b4731; /* verde más oscuro */
   color: #ffffff;
   padding: 24px 20px 32px;
-}
-
-.nav-mobile.is-open {
-  display: block;             /* se muestra cuando tiene la clase */
 }
 
 .nav-mobile nav {
