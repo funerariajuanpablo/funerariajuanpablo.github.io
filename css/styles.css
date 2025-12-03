@@ -380,7 +380,7 @@ body {
 
 .section-services {
   background-color: #3d6944;
-  background-image: url("../img/geometric-texture-01.png");
+  background-image: url("../img/geometric-texture-01.svg");
   background-repeat: no-repeat;
   background-size: cover;     /* fills the whole area */
   background-position: center; /* keeps pattern centered */
