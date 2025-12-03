@@ -449,7 +449,7 @@ body {
 
   .section-services-list {
     grid-template-columns: repeat(2, minmax(0, 1fr)); /* dos columnas */
-    column-gap: 60px;
+    column-gap: 20px;
     row-gap: 18px;
     justify-items: center;   /* centra los elementos en cada columna */
   }
