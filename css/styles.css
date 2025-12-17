@@ -379,9 +379,9 @@ body {
 /* ===== SECTION: Servicios Funerarios ===== */
 
 .section-services {
-  background-color: #28492D;
+  background-color: #3d6944;
   background-image: url("../img/geometric-texture-01.svg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;     /* fills the whole area */
   background-position: center; /* keeps pattern centered */
   color: #ffffff;
